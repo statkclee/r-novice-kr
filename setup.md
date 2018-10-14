@@ -1,22 +1,22 @@
 ---
 layout: page
-title: Setup
+title: 설치
 root: .
 ---
 
-This lesson assumes you have the R software and the development environment RStudio installed on your computer.
+이번 학습은 R 소프트웨어와 함께 RStudio 통합개발환경(IDE)가 학습자 컴퓨터에 설치된 것을 가정하고 진행된다.
 
-[R can be downloaded here](https://cran.r-project.org/mirrors.html).
+[R 소프트웨어 다운로드](https://cran.r-project.org/mirrors.html).
 
-[RStudio can be downloaded here](https://www.rstudio.com/products/rstudio/download/).
-You will need the Desktop version for your computer.
+[RStudio 다운로드](https://www.rstudio.com/products/rstudio/download/).
+학습 컴퓨터에 데스크탑 버젼(Desktop version)을 설치한다.
 
-You also need to download some files to follow this lesson:
+학습에 필요한 파일도 다운로드한다:
 
-1. Make a new folder in your Desktop called `r-novice-inflammation`.
-2. Download [r-novice-inflammation-data.zip]({{ page.root }}/files/r-novice-inflammation-data.zip) and move the file to this folder.
-3. If it's not unzipped yet, double-click on it to unzip it. You should end up with a new folder called `data`.
-4. You can access this folder from the Unix shell with:
+1. 신규로 `r-novice-inflammation` 폴더를 바탕화면에 생성한다.
+2. [r-novice-inflammation-data.zip]({{ page.root }}/files/r-novice-inflammation-data.zip) 파일을 다운로드 해서 상기 폴더로 이동한다.
+3. 압축을 풀지 않은 경우, 더블클릭해서 압축을 푼다. 압축을 풀면 `data` 폴터가 새로 생성된 것이 확인되야 한다.
+4. 유닉스 쉘로 `data` 폴더로 접근한다:
 
 ~~~
 $ cd

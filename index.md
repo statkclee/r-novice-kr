@@ -3,30 +3,29 @@ layout: lesson
 root: .
 ---
 
-The best way to learn how to program is to do something useful,
-so this introduction to R is built around a common scientific task:
-data analysis.
+프로그램을 어떻게 작성하는지 배우는 가장 좋은 방법은 의미있는 무언가를 작성해보는 것이다.
+그래서 금번 R 소개는 흔한 과학 작업에 맞춰있다: 자료 분석(Data Analysis).
 
-Our real goal isn't to teach you R,
-but to teach you the basic concepts that all programming depends on.
-We use R in our lessons because:
+진정한 목적은 R을 가르치는 것이 아니라, 
+모든 프로그래밍에 기반하는 기본 개념을 전달함에 있다.
+R을 사용해서 학습을 진행한다. 왜냐하면,
 
-1.  we have to use *something* for examples;
-2.  it's free, well-documented, and runs almost everywhere;
-3.  it has a large (and growing) user base among scientists; and
-4.  it has a large library of external packages available for performing diverse tasks.
+1. 예제로 *어떤* 언어든지 사용해야만 된다.
+2. 무료이고, 문서화가 잘 되어 있고, 거의 모든 곳에서 실행된다.
+3. 과학자들 사이에 커다란 (그리고 점증하는) 사용자 기반이 있다.
+4. 다양한 작업을 수행하는데 이용가능한 외부 패키지 라이브러리가 많다.
 
-But the two most important things are
-to use whatever language your colleagues are using,
-so you can share your work with them easily,
-and to use that language *well*.
+하지만, 두 가지 가장 중요한 것은
+어떤 언어든 상관없이 동료가 사용하는 언어를 사용해서, 
+작업 결과를 쉽게 공유할 수 있어야 하고, 
+해당 언어를 *잘* 사용해야 된다는 점이다.
 
-We are studying inflammation in patients who have been given a new treatment for arthritis,
-and need to analyze the first dozen data sets of their daily inflammation.
-The data sets are stored in [comma-separated values]({{ page.root }}/reference.html#comma-separated-values-csv) (CSV) format:
-each row holds information for a single patient,
-and the columns represent successive days.
-The first few rows of our first file look like this:
+관절염에 대한 새로운 치료법이 처방된 환자의 염증에 대한 연구를 진행하고 있고, 
+첫 데이터셋(Data Set) 12개를 분석할 필요가 있다. 
+데이터셋은 [CSV 형식](reference.html#comma-separated-values)(comma-separated values, 구분자가 콤마 값을 가진 파일 형식)으로 저장되어 있다: 
+각 행은 환자 한명에 대한 정보로 구성되고, 
+열은 연속된 날짜 정보를 나타낸다. 
+첫번째 파일에 대한 처음 행 몇줄 정보는 다음과 같다:
 
 ~~~
 0,0,1,3,1,2,4,7,8,3,3,3,10,5,7,4,7,7,12,18,6,13,11,11,7,7,4,6,8,8,4,4,5,7,3,4,2,3,0,0
@@ -37,17 +36,16 @@ The first few rows of our first file look like this:
 ~~~
 {: .source}
 
-We want to:
+작업할 사항은 다음과 같다:
 
-*   load that data into memory,
-*   calculate the average inflammation per day across all patients, and
-*   plot the result.
+*  CSV 형식 데이터 파일을 주기억장치에 적재(loading)한다.
+*  모든 환자에 대해서 각 날짜별로 평균 염증을 계산한다.
+*  결과값을 도식화한다.
 
-To do all that, we'll have to learn a little bit about programming.
+상기 작업을 수행하기 위해서, 프로그래밍에 관해 약간 학습할 필요가 있다.
 
-> ## Prerequisites
+> ## 선수과목
 >
-> Learners need to understand the concepts of files and directories
-> (including the working directory).
-> We often use RStudio to teach this lesson, but it is not required.
+> 학습자는 (작업 디렉토리를 포함) 파일과 디렉토리에 관한 개념을 이해할 필요가 있다.
+> 흔히 RStudio를 사용해서 학습을 진행하지만, 필수로 요구되는 것은 아니다.
 {: .prereq}
